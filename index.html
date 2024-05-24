@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADECLA</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    /* Estilos simples para los botones */
+    .boton-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .boton {
+      padding: 10px 20px;
+      color: #333; /* Cambia el color de la letra a negro */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #f3f3f3; /* Cambia el color del botón a un tono de beige */
+    }
+
+    .boton:hover {
+      background-color: #e0e0e0; /* Cambia el color del botón al pasar el ratón */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos para el menú contextual */
+    .menu-contextual {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      background: linear-gradient(to bottom, #f3f3f3 0%, #e0e0e0 100%);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      flex-direction: column;
+    }
+
+    .boton-nosotros:hover .menu-contextual {
+      display: flex;
+      animation: fadeIn 0.3s ease; /* Animación de aparición */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .menu-contextual a {
+      padding: 10px 20px;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+      width: 100%;
+      background-color: transparent;
+      transition: background-color 0.3s ease; /* Animación de cambio de color */
+      text-decoration: none; /* Quita la subrayado de los enlaces */
+    }
+
+    .menu-contextual a:hover {
+      background-color: #dcdcdc;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	}
+    
+    /* Colores de los botones */
+    .historia { background-color: #f3f3f3; }
+    .directiva { background-color: #e0e0e0; }
+    .proyectos { background-color: #d3d3d3; }
+    .documentacion { background-color: #c0c0c0; }
+    
+    /* Estilos para el contenedor del logo */
+    .logo-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      max-width: 175px;
+      z-index: 2;
+    }
+
+    /* Estilos para la imagen del logo */
+    .logo {
+      width: 100%;
+      height: auto;
+    }
+    
+    /* Estilos para el contenedor de imagen en la esquina superior derecha */
+    .image-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      max-width: 100px;
+      z-index: 2;
+    }
+
+    /* Estilos para la imagen */
+    .image {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    /* Estilos para el título */
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2.5rem;
+      color: #fff; /* Cambia el color del título a blanco */
+      text-align: center;
+      margin-bottom: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    
+    /* Estilos para el rectángulo con la imagen de portada */
+    .cover-container {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    
+    .cover-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+/* Estilos del cuerpo de la entrada del blog */
+    .entry {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    /* Estilos para el título de la entrada del blog */
+    .entry-title {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    /* Estilos para la fecha de la entrada del blog */
+    .entry-date {
+      font-size: 0.8rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    /* Estilos para el contenido de la entrada del blog */
+    .entry-content {
+      color: #555;
+    }
+
+    /* Estilos para los enlaces a Facebook */
+    .facebook-link {
+      display: block; /* Asegura que el enlace ocupe todo el ancho del contenedor */
+      margin-top: 10px; /* Espacio entre el contenido de la entrada y el enlace de Facebook */
+      text-decoration: none; /* Elimina el subrayado predeterminado */
+      color: #3b5998; /* Color azul de Facebook */
+    }
+
+    .facebook-link:hover {
+      text-decoration: underline; /* Subrayado al pasar el ratón */
+    }
+
+    /* Estilos para el contenedor de imagen */
+    .image-container {
+      margin-top: 20px; /* Espacio entre el contenido y la imagen */
+    }
+
+    /* Estilos para la imagen */
+    .entry-image {
+      width: 100%; /* Ocupa todo el ancho del contenedor */
+      max-height: 200px; /* Altura máxima de la imagen */
+      object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio disponible sin distorsionarla */
+      border-radius: 10px; /* Bordes redondeados */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Rectángulo con imagen de portada -->
+  <div class="cover-container">
+    <h1>ADE de Arte y Cultura <br>La Aurora, Heredia</h1>
+    <img src="imagen_de_portada.jpg" alt="Imagen de portada" class="cover-img">
+  </div>
+
+  <!-- Contenedor del logo -->
+  <div class="logo-container">
+    <img src="tu_logo.png" alt="Logo ADE" class="logo">
+  </div>
+
+  <!-- Contenedor de imagen en la esquina superior derecha -->
+  <div class="image-container">
+    <img src="otra_imagen.jpg" alt="Otra imagen" class="image">
+  </div>
+
+  <!-- Contenedor de botones con animaciones -->
+  <div class="boton-container">
+    <a href="index.html" class="boton">Inicio</a>
+    <div class="boton boton-nosotros">
+      Nosotros
+      <div class="menu-contextual">
+        <a href="historia.html" class="menu-contextual-button historia">Historia</a>
+        <a href="juntadirectiva.html" class="menu-contextual-button directiva">Junta Directiva</a>
+        <a href="proyectos.html" class="menu-contextual-button proyectos">Proyectos</a>
+        <a href="documentacion.html" class="menu-contextual-button documentacion">Documentación</a>
+      </div>
+    </div>
+	<a href="contacto.html" class="boton">Contáctanos</a>
+  </div>
+
+<!-- Entrada de blog 1 -->
+  <div class="entry">
+    <h2 class="entry-title">Creando Alianzas UCR - ADECLA</h2>
+    <p class="entry-date">24 de abril de 2024</p>
+    <p class="entry-content">ADECLA se une con la Escuela de Promoción de la Salud de la UCR, para crear una alianza y mejorar los proyectos comunales.</p>
+    <a href="https://www.facebook.com/adeculturaaurora/posts/443910771549090?ref=embed_post" class="facebook-link" target="_blank">Visita nuestra página en Facebook</a>
+  </div>
+
+  <!-- Entrada de blog 2 -->
+  <div class="entry">
+    <h2 class="entry-title">ADECLA realiza su famoso festival Aurora Brilla 2023</h2>
+    <p class="entry-date">02 de diciembre de 2023</p>
+    <p class="entry-content">Con la presencia de la señora Angela Aguilar, Alcaldesa de Heredia, <br> y señora Nancy Córdoba, Síndica de Distrito Ulloa, celebramos el inicio de la Navidad 2023</p>
+    <a href="https://www.facebook.com/adeculturaaurora/posts/pfbid02Qp6vgX3MK6gNC6cFPL6feGTezybkfhoNRSpy4371h6vQctLVsEtfiJuJnR4vd66Jl" class="facebook-link" target="_blank">Visita nuestra página en Facebook</a>
+  </div>
+
+</body>
+</html>

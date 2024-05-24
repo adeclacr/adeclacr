@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADECLA</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    /* Estilos para el encabezado */
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+	.header2 {
+      background-color: #413030;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Estilos del cuerpo de la página */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilos para los títulos */
+    h1, h2 {
+      text-align: center;
+    }
+	
+	
+	
+    /* Estilos para las imágenes */
+    .miembro-imagen {
+      width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
+      height: auto;
+      margin: 0 auto 10px; /* Ajusta el margen inferior para separar las imágenes */
+      display: block;
+      border-radius: 50%; /* Esto hace que la imagen sea redonda */
+    }
+
+    /* Estilos para las listas */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px; /* Espacio entre cada miembro de la junta */
+    }
+	/* Estilos para los botones */
+    .boton-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .boton {
+      padding: 10px 20px;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #f3f3f3;
+    }
+
+    .boton:hover {
+      background-color: #e0e0e0;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos para el menú contextual */
+    .menu-contextual {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      background: linear-gradient(to bottom, #f3f3f3 0%, #e0e0e0 100%);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      flex-direction: column;
+    }
+
+    .boton-nosotros:hover .menu-contextual {
+      display: flex;
+      animation: fadeIn 0.3s ease; /* Animación de aparición */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .menu-contextual a {
+      padding: 10px 20px;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+      width: 100%;
+      background-color: transparent;
+      transition: background-color 0.3s ease; /* Animación de cambio de color */
+      text-decoration: none; /* Quita la subrayado de los enlaces */
+    }
+
+    .menu-contextual a:hover {
+      background-color: #dcdcdc;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	}
+	/* Estilos del cuerpo de la página */
+    .content {
+      max-width: 600px;
+      margin: 10px;
+      padding: 20px;
+    }
+
+    /* Estilos para los títulos */
+    h1, h2 {
+      text-align: center;
+    }
+
+    /* Estilos para la cuadrícula */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas con tamaño igual */
+      gap: 10px; /* Espacio entre las celdas */
+    }
+
+    .grid-item {
+      border: 3px solid #ccc; /* Borde de las celdas */
+      padding: 100px; /* Espaciado interno */
+    }
+
+    .grid-item img {
+      max-width: 200px; /* La imagen ocupa el ancho completo de la celda */
+      display: block; /* Evita espacios no deseados */
+      margin-bottom: 5px; /* Espacio entre la imagen y el texto */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <div class="header">
+    <h1>Proyectos <br> ADECLA</h1>
+  </div>
+<!-- Contenedor de botones con animaciones -->
+  <div class="boton-container">
+    <a href="index.html" class="boton">Inicio</a>
+    <div class="boton boton-nosotros">
+      Nosotros
+      <div class="menu-contextual">
+        <a href="historia.html" class="menu-contextual-button historia">Historia</a>
+        <a href="juntadirectiva.html" class="menu-contextual-button directiva">Junta Directiva</a>
+        <a href="proyectos.html" class="menu-contextual-button proyectos">Proyectos</a>
+        <a href="documentacion.html" class="menu-contextual-button documentacion">Documentación</a>
+      </div>
+    </div>
+    <a href="contacto.html" class="boton">Contáctanos</a>
+  </div>
+  <br>
+  <!-- Contenido de la página -->
+ <div class="header2">
+    <h2>Proyectos Realizados</h2>
+  </div>
+  <div class="content">
+     <div class="grid">
+      <!-- Fila 1 -->
+      <div class="grid-item">
+	  <center>
+        <img src="imagen_proyecto1.jpg" alt="Proyecto 1">
+        <p><strong>Nombre del proyecto:</strong><br> Festival Aurora Brilla</p>
+        <p><strong>Fecha:</strong> Diciembre</p>
+        <p><strong>Ubicación:</strong> n/a </p>
+		</center>
+      </div>
+      <div class="grid-item">
+	  <center>
+        <img src="imagen_proyecto2.jpg" alt="Proyecto 2">
+        <p><strong>Nombre del proyecto:</strong><br> Mural Parque Mirador</p>
+        <p><strong>Fecha:</strong> Marzo, 2023</p>
+        <p><strong>Ubicación:</strong> Parque Mirador, La Aurora de Heredia </p>
+		</center>
+      </div>
+	  <div class="grid-item">
+	  <center>
+        <img src="imagen_proyecto3.jpg" alt="Proyecto 3">
+        <p><strong>Nombre del proyecto:</strong><br> Coreógrafo Profesional para las agrupaciones comunales</p>
+        <p><strong>Fecha:</strong> s.f.</p>
+        <p><strong>Ubicación:</strong> s.u. </p>
+		</center>
+      </div> 
+	  </div>
+	  <br>
+	  <div class="grid">
+      <div class="grid-item">
+	  <center>
+        <img src="imagen_proyecto4.jpg" alt="Proyecto 4">
+        <p><strong>Nombre del proyecto:</strong><br> Trajes culturales para las agrupaciones</p>
+        <p><strong>Fecha:</strong> s.f.</p>
+        <p><strong>Ubicación:</strong> n/a </p>
+		</center>
+      </div>
+      </div>
+	 </div>
+	<br>
+	<br>
+	<div class="header2">
+    <h2>Proyectos futuros</h2>
+  </div>
+  <center>
+    <div class="content">
+     <div class="grid">
+      <!-- Fila 1 -->
+      <div class="grid-item">
+	  <center>
+        <img src="imagen_futuro1.jpg" alt="Proyecto futuro 1">
+        <p><strong>Nombre del proyecto:</strong><br> Casa de la Cultura y el Arte de La Aurora</p>
+        <p><strong>Fecha proyectada:</strong> s.f.</p>
+        <p><strong>Presupuesto:</strong> ¢60 millones </p>
+		</center>
+      </div>
+      <div class="grid-item">
+	  <center>
+        <img src="imagen_futuro2.jpg" alt="Proyecto futuro 2">
+        <p><strong>Nombre del proyecto:</strong><br> Mural sector AP</p>
+        <p><strong>Fecha projectada:</strong> Octubre, 2025</p>
+        <p><strong>Presupuesto:</strong> ¢6.1 millones </p>
+		</center>
+      </div>
+	   
+	  </div>
+	  <br>
+	  <div class="grid">
+	  <div class="grid-item">
+	  <center>
+        <img src="imagen_futuro3.jpg" alt="Proyecto futuro 3">
+        <p><strong>Nombre del proyecto:</strong><br> Festival Cultural Aurora Brilla 2025</p>
+        <p><strong>Fecha projectada:</strong> Diciembre, 2025</p>
+        <p><strong>Presupuesto:</strong> ¢8 millones </p>
+		</center>
+      </div>
+      <div class="grid-item">
+	  <center>
+        <img src="imagen_futuro4.jpg" alt="Proyecto futuro 4">
+        <p><strong>Nombre del proyecto:</strong><br> Colocación de asta bandera en Parque Central, La Aurora</p>
+        <p><strong>Fecha projectada:</strong> Octubre, 2024</p>
+        <p><strong>Presupuesto:</strong> ¢3.5 millones </p>
+		</center>
+      </div>
+      </div>
+	 </div>
+	 </center>
+
+	
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junta Directiva - ADECLA</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    /* Estilos para el encabezado */
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Estilos del cuerpo de la página */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilos para los títulos */
+    h1, h2 {
+      text-align: center;
+    }
+
+    /* Estilos para las imágenes */
+    .miembro-imagen {
+      width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
+      height: auto;
+      margin: 0 auto 10px; /* Ajusta el margen inferior para separar las imágenes */
+      display: block;
+      border-radius: 50%; /* Esto hace que la imagen sea redonda */
+    }
+
+    /* Estilos para las listas */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px; /* Espacio entre cada miembro de la junta */
+    }
+	/* Estilos para los botones */
+    .boton-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .boton {
+      padding: 10px 20px;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #f3f3f3;
+    }
+
+    .boton:hover {
+      background-color: #e0e0e0;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos para el menú contextual */
+    .menu-contextual {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      background: linear-gradient(to bottom, #f3f3f3 0%, #e0e0e0 100%);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      flex-direction: column;
+    }
+
+    .boton-nosotros:hover .menu-contextual {
+      display: flex;
+      animation: fadeIn 0.3s ease; /* Animación de aparición */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .menu-contextual a {
+      padding: 10px 20px;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+      width: 100%;
+      background-color: transparent;
+      transition: background-color 0.3s ease; /* Animación de cambio de color */
+      text-decoration: none; /* Quita la subrayado de los enlaces */
+    }
+
+    .menu-contextual a:hover {
+      background-color: #dcdcdc;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	}
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <div class="header">
+    <h1>Junta Directiva <br> ADECLA</h1>
+  </div>
+<!-- Contenedor de botones con animaciones -->
+  <div class="boton-container">
+    <a href="index.html" class="boton">Inicio</a>
+    <div class="boton boton-nosotros">
+      Nosotros
+      <div class="menu-contextual">
+        <a href="historia.html" class="menu-contextual-button historia">Historia</a>
+        <a href="juntadirectiva.html" class="menu-contextual-button directiva">Junta Directiva</a>
+        <a href="proyectos.html" class="menu-contextual-button proyectos">Proyectos</a>
+        <a href="documentacion.html" class="menu-contextual-button documentacion">Documentación</a>
+      </div>
+    </div>
+    <a href="contacto.html" class="boton">Contáctanos</a>
+  </div>
+  <!-- Contenedor de la información de la Junta Directiva -->
+  <div class="content">
+    <h2>Miembros de la Junta Directiva <br> 2023 - 2025 </h2>
+	<center>
+    <ul>
+      <li>
+        <img src="imagen_presidente.jpg" alt="Presidente" class="miembro-imagen">
+        <strong>Nombre completo:</strong>Yadira López Álvarez<br>
+        <strong>Puesto:</strong> Presidente
+      </li>
+      <li>
+        <img src="imagen_vicepresidente.jpg" alt="Vicepresidente" class="miembro-imagen">
+        <strong>Nombre completo:</strong>Andrés Eubanks Guillén<br>
+        <strong>Puesto:</strong> Vicepresidente
+      </li>
+     <li>
+        <img src="imagen_secretaria.jpg" alt="Vicepresidente" class="miembro-imagen">
+        <strong>Nombre completo:</strong>Maritza Vega Elizondo<br>
+        <strong>Puesto:</strong> Secretaria
+      </li>
+	  <li>
+        <img src="imagen_tesorero.jpg" alt="Vicepresidente" class="miembro-imagen">
+        <strong>Nombre completo:</strong>Ricardo Martínez Bolívar<br>
+        <strong>Puesto:</strong> Tesorero
+      </li>
+	  <li>
+        <img src="imagen_vocal1.jpg" alt="Vicepresidente" class="miembro-imagen">
+        <strong>Nombre completo:</strong> Flor Loría Campos<br>
+        <strong>Puesto:</strong> Vocal 1
+      </li>
+	  <li>
+        <img src="imagen_vocal2.jpg" alt="Vicepresidente" class="miembro-imagen">
+        <strong>Nombre completo:</strong> Isabel Herrera Rodríguez<br>
+        <strong>Puesto:</strong> Vocal 2
+      </li>
+	  <li>
+        <img src="imagen_vocal3.jpg" alt="Vicepresidente" class="miembro-imagen">
+        <strong>Nombre completo:</strong>Doris Fernández Fernández<br>
+        <strong>Puesto:</strong> Vocal 3
+      </li>
+	  <li>
+        <img src="imagen_fiscal.jpg" alt="Vicepresidente" class="miembro-imagen">
+        <strong>Nombre completo:</strong>Esteban Bastos Vargas<br>
+        <strong>Puesto:</strong> Fiscal
+      </li>
+    </ul>
+  </div>
+</center>
+</body>
+</html>

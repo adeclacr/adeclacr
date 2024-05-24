@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADECLA</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Estilos para el encabezado */
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+	.header2 {
+      background-color: #413030;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Estilos del cuerpo de la página */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilos para los títulos */
+    h1, h2 {
+      text-align: center;
+    }
+	
+	
+	
+    /* Estilos para las imágenes */
+    .miembro-imagen {
+      width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
+      height: auto;
+      margin: 0 auto 10px; /* Ajusta el margen inferior para separar las imágenes */
+      display: block;
+      border-radius: 50%; /* Esto hace que la imagen sea redonda */
+    }
+
+    /* Estilos para las listas */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px; /* Espacio entre cada miembro de la junta */
+    }
+	/* Estilos para los botones */
+    .boton-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .boton {
+      padding: 10px 20px;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #f3f3f3;
+    }
+
+    .boton:hover {
+      background-color: #e0e0e0;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos para el menú contextual */
+    .menu-contextual {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      background: linear-gradient(to bottom, #f3f3f3 0%, #e0e0e0 100%);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      flex-direction: column;
+    }
+
+    .boton-nosotros:hover .menu-contextual {
+      display: flex;
+      animation: fadeIn 0.3s ease; /* Animación de aparición */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .menu-contextual a {
+      padding: 10px 20px;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+      width: 100%;
+      background-color: transparent;
+      transition: background-color 0.3s ease; /* Animación de cambio de color */
+      text-decoration: none; /* Quita la subrayado de los enlaces */
+    }
+
+    .menu-contextual a:hover {
+      background-color: #dcdcdc;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	}
+	/* Estilos del cuerpo de la página */
+    .content {
+      max-width: 600px;
+      margin: 10px;
+      padding: 20px;
+    }
+
+    /* Estilos para los títulos */
+    h1, h2 {
+      text-align: center;
+    }
+
+    /* Estilos para la cuadrícula */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas con tamaño igual */
+      gap: 20px; /* Espacio entre las celdas */
+    }
+
+    /* Estilos para cada elemento de la cuadrícula */
+    .document-item {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .document-item img {
+      max-width: 50px;
+      max-height: 50px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .document-item p {
+      margin: 0 0 10px;
+    }
+
+    .document-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #f3f3f3;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .document-link:hover {
+      background-color: #e0e0e0;
+    }
+	
+	 /* Estilos para el formulario */
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+
+    /* Estilos para los enlaces */
+    .contact-info {
+      margin-bottom: 20px;
+    }
+
+    .contact-info a {
+      display: inline-block;
+      margin-right: 20px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* Estilos para el mapa */
+    .map-container {
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    /* Estilos para el mensaje motivador */
+    .motivational-message {
+      text-align: center;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+    }
+	
+	 /* Estilos para los íconos */
+    .contact-info a {
+      display: inline-block;
+      margin-right: 20px;
+      color: #333;
+      text-decoration: none;
+    }
+	    body {
+        font-family: Arial, sans-serif;
+    }
+    label {
+        font-weight: bold;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <div class="header">
+    <h1> Contacto</h1>
+  </div>
+<!-- Contenedor de botones con animaciones -->
+  <div class="boton-container">
+    <a href="index.html" class="boton">Inicio</a>
+    <div class="boton boton-nosotros"> Nosotros
+      <div class="menu-contextual">
+        <a href="historia.html" class="menu-contextual-button historia">Historia</a>
+        <a href="juntadirectiva.html" class="menu-contextual-button directiva">Junta Directiva</a>
+        <a href="proyectos.html" class="menu-contextual-button proyectos">Proyectos</a>
+        <a href="documentacion.html" class="menu-contextual-button documentacion">Documentación</a>
+      </div>
+    </div>
+    <a href="contacto.html" class="boton">Contáctanos</a>
+  </div>
+  <br>
+  
+   <!-- Contenido de la página -->
+  <center>
+  <div class="content">
+  
+    <!-- Formulario de contacto -->
+	<h2>Formulario de Contacto</h2>
+<form action="mailto:adecla.aurora@gmail.com" method="post" enctype="text/plain">
+    <label for="nombre">Nombre Completo:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="telefono">Teléfono:</label><br>
+    <input type="tel" id="telefono" name="telefono"><br><br>
+
+    <label for="email">Correo Electrónico:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+    <div class="content">
+    <!-- Información de contacto -->
+    <div class="contact-info">
+      <a href="mailto:adecla.aurora@gmail.com"><i class="fas fa-envelope"></i> Enviar correo</a>
+      <a href="https://www.facebook.com/adeculturaaurora/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://wa.link/23ldlr" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+
+    <!-- Mapa de Google Maps -->
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1964.6609148098812!2d-84.1522649726402!3d9.990252166616251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fa53d59d04e7%3A0xafcaa5df5576c17!2sAv.%20Mercurio%2C%20Heredia%2C%20La%20Aurora!5e0!3m2!1ses-419!2scr!4v1716261600330!5m2!1ses-419!2scr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Mensaje motivador -->
+    <div class="motivational-message">
+      <p>Únete a nuestra asociación y juntos trabajaremos por un futuro mejor para nuestra comunidad. ¡Te esperamos!</p>
+    </div>
+	
+  </div>
+  </center>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADECLA</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    /* Estilos para el encabezado */
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Estilos del cuerpo de la página */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilos para los títulos */
+    h1, h2 {
+      text-align: center;
+    }
+
+    /* Estilos para los párrafos */
+    p {
+      line-height: 1.6;
+    }
+
+     /* Estilos para los botones */
+    .boton-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .boton {
+      padding: 10px 20px;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #f3f3f3;
+    }
+
+    .boton:hover {
+      background-color: #e0e0e0;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos para el menú contextual */
+    .menu-contextual {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      background: linear-gradient(to bottom, #f3f3f3 0%, #e0e0e0 100%);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      flex-direction: column;
+    }
+
+    .boton-nosotros:hover .menu-contextual {
+      display: flex;
+      animation: fadeIn 0.3s ease; /* Animación de aparición */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .menu-contextual a {
+      padding: 10px 20px;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+      width: 100%;
+      background-color: transparent;
+      transition: background-color 0.3s ease; /* Animación de cambio de color */
+      text-decoration: none; /* Quita la subrayado de los enlaces */
+    }
+
+    .menu-contextual a:hover {
+      background-color: #dcdcdc;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	}
+	.paragraph-container img {
+      max-width: 400px; /* La imagen ocupa el ancho completo de la celda */
+      display: block; /* Evita espacios no deseados */
+      margin-bottom: 5px; /* Espacio entre la imagen y el texto */
+	  align: center
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <div class="header">
+    <h1>Historia de ADE de Arte y Cultura La Aurora, Heredia</h1>
+  </div>
+<!-- Contenedor de botones con animaciones -->
+  <div class="boton-container">
+    <a href="index.html" class="boton">Inicio</a>
+    <div class="boton boton-nosotros">
+      Nosotros
+      <div class="menu-contextual">
+        <a href="historia.html" class="menu-contextual-button historia">Historia</a>
+        <a href="juntadirectiva.html" class="menu-contextual-button directiva">Junta Directiva</a>
+        <a href="proyectos.html" class="menu-contextual-button proyectos">Proyectos</a>
+        <a href="documentacion.html" class="menu-contextual-button documentacion">Documentación</a>
+      </div>
+    </div>
+    <a href="contacto.html" class="boton">Contáctanos</a>
+  </div>
+  
+  
+  
+  <!-- Contenido -->
+  <div class="content">
+    <div class="paragraph-container">
+      <p><strong>Reseña histórica de la ADE para el Arte y la Cultura</strong></p>
+    </div>
+	<div class="paragraph-container">
+      <p><strong>Orígenes e iniciativa:</strong> La ADE para el Arte y la Cultura de la Aurora de Heredia surgió de la visión y el esfuerzo de la señora Yadira López, quien, en su calidad de secretaria de la Asociación El Guapinol, identificó la necesidad y la oportunidad de crear una organización cultural en la comunidad de La Aurora. Motivada por la importancia de promover la cultura y el desarrollo social, la señora Yadira López emprendió la tarea de investigar los pasos necesarios para la creación de una asociación.</p>
+    </div>
+	<center>
+    <div class="paragraph-container">
+      <img src="imagen1.jpg" alt="Imagen representativa" class="entry-image">
+    </div>
+	</center>
+    <div class="paragraph-container">
+      <p><strong>Investigación y búsqueda de asesoría:</strong> En su búsqueda de orientación, la señora Yadira López consultó con el administrador de la Asociación El Guapinol, quien le brindó información básica sobre el funcionamiento de las asociaciones. Posteriormente, acudió a una abogada, quien la remitió a don Olger, otro abogado. Don Olger le explicó que la asociación podía constituirse de forma privada, similar a la Asociación El Guapinol, o bien, a través de DINADECO, lo que abriría mayores posibilidades de recibir apoyo.</p>
+    </div>
+	<center>
+    <div class="paragraph-container">
+      <img src="imagen2.jpg" alt="Imagen representativa" class="entry-image">
+    </div>
+	</center>
+    <div class="paragraph-container">
+      <p><strong>Reclutamiento de socios y primeros pasos:</strong> Convencida de la viabilidad del proyecto, la señora Yadira López conversó con algunos vecinos conocidos, planteándoles la idea de crear la ADE para el Arte y la Cultura. Se estableció la necesidad de contar con un mínimo de 50 socios, lo que representó un desafío inicial. Con la colaboración de don Álvaro, se programó una reunión para explicar el proyecto a la comunidad. La señora Yadira López se dedicó a recopilar la documentación necesaria, incluyendo un libro de actas y un libro de socios.</p>
+    </div>
+    <div class="paragraph-container">
+      <p><strong>Primera reunión y elección de la junta directiva:</strong> En la primera convocatoria, no se logró reunir el número mínimo de socios. Sin embargo, en la segunda convocatoria, se logró la asistencia de 89 personas, incluyendo vecinos, amigos, padres de familia y bailarines. Ese mismo día se procedió a la elección de la primera junta directiva de la ADE para el Arte y la Cultura.</p>
+    </div>
+    <div class="paragraph-container">
+      <p><strong>Fructífera trayectoria:</strong> A partir de su creación, la ADE para el Arte y la Cultura ha desarrollado una fructífera trayectoria, impulsando numerosos proyectos que han enriquecido el panorama cultural y social de la comunidad. Entre sus iniciativas más destacadas se encuentran:</p>
+      <ul>
+        <li><strong>Festival Aurora Brilla:</strong> Un evento anual que se ha llevado a cabo en los años 2017, 2018, 2019 y 2023, reuniendo a la comunidad en torno a diversas expresiones artísticas y culturales.</li>
+        <li><strong>Murales comunitarios:</strong> La creación de murales en diversos espacios públicos de la comunidad, fomentando el sentido de identidad y embelleciendo el entorno.</li>
+        <li><strong>Actos culturales:</strong> La organización de eventos culturales de diversa índole, como obras de teatro, conciertos, talleres y exposiciones, promoviendo el acceso a la cultura y el desarrollo de las artes.</li>
+        <li><strong>Otras actividades:</strong> La ADE para el Arte y la Cultura también ha llevado a cabo otras iniciativas, como la realización de talleres educativos, la promoción del deporte y la recreación, y la colaboración con otras organizaciones comunitarias.</li>
+      </ul>
+    </div>
+    <div class="paragraph-container">
+      <p><strong>Conclusión:</strong> La creación de la ADE para el Arte y la Cultura es un testimonio de la iniciativa, el liderazgo y la visión de la señora Yadira López. A pesar de los desafíos iniciales, su compromiso y perseverancia permitieron el establecimiento de una organización que ha contribuido de manera significativa al desarrollo cultural y social de la comunidad de La Aurora. La trayectoria de la Asociación está marcada por la realización de numerosos proyectos que han beneficiado a los habitantes de la comunidad, fomentando el arraigo cultural, el sentido de pertenencia y el bienestar general.</p>
+    </div>
+  </div>
+
+</body>
+</html>
